@@ -1,0 +1,50 @@
+
+/*Title of page*/
+.title{
+	font-size: 30px;
+	text-align: center;
+}
+
+/* Body */
+body{
+	background: url('http://k38.kn3.net/taringa/3/3/8/1/3/7//aadamm/573.jpg?6665')no-repeat fixed; 
+	cursor: url("http://u.jimdo.com/www21/o/s4e9df44a0ad8ccd8/img/i0ebb25453c3942ad/1391502327/thumb/image.png"),default; 
+}
+
+/*Credits*/
+.logo{
+	margin-top: 150px;
+	margin-left: 400px;
+}
+
+/*Tabla de la lista*/
+.display{
+	margin-top: 100px;
+	margin-left: 50px;
+}
+
+.playImage{
+	width: 126px;
+	height: 126px;
+}
+
+/******Div of Filters*****/
+/*.Filters {
+	display: inline-block;
+}*/
+
+.ForSongAZ{
+	font-size: 20px;
+	border: 2px solid white;
+	border-radius: 5px;
+	height: ;
+	width: ;
+}
+
+.ForSongZA{
+	font-size: 20px;
+	border: 2px solid white;
+	border-radius: 5px;
+	margin-top: -48px;
+	margin-left: 220px;
+}
