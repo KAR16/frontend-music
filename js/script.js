@@ -25,11 +25,11 @@ $(document).ready(function() {
 		$(".display").append("<tr> "+ 
 								"<td class =\"num\"> "+ no +"</td>"+
 								"<td class =\"song\"> "+ Song[i] +"</td>"+
-								"<td class =\"image\"> <img src=\""+ ImageAlbum[i] +"\" alt=\"ImgDisk\"/></td>"+
+								"<td class =\"image\"> <img src=\""+ ImageAlbum[i] +"\" class =\"img-responsive\" alt=\"ImgDisk\"/></td>"+
 								"<td class =\"artist\"> <a href =\""+ArtistBiography[i]+"\" target=\"blank\">"+ NameArtist[i] +"</a></td>"+
 								"<td class =\"playcount\"> "+ Playcounts[i] +"</td>"+
 								"<td class =\"duration\"> "+ Duration[i] +"</td>"+
-								"<td class =\"play\"> <a href =\""+PlaySong[i]+"\" target=\"blank\"><img src=\"http://www.clipartbest.com/cliparts/aiq/egx/aiqegxpAT.png\" class = \"playImage\"> </a> </td>");
+								"<td class =\"play\"> <a href =\""+PlaySong[i]+"\" target=\"blank\"><img src=\"images/play.png\" class=\"img-responsive\" alt=\"playImage\"> </a> </td>");
 	};
 
 	jQuery(document).ready(function($) { 
@@ -69,7 +69,7 @@ $(document).ready(function() {
 			        	ImageAlbum.push(parse_music["tracks"]["track"][i]["image"][2]["#text"]);}
         			catch(err){
         				ImageAlbum.push("http://th07.deviantart.net/fs70/150/f/2011/008/9/f/token_like_aimp_icon_by_ri_cule-d36ov6u.png");}
-        			//displaylist(i);
+        			displaylist(i);
 	        };
     	}
     });
