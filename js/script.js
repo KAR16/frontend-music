@@ -20,12 +20,18 @@ $(document).ready(function() {
 	function deMayorAMenor(elem1, elem2) {
 		return elem2-elem1;
 	}
+
+	function addClass(clase){
+		$(".filters li").removeClass("active");
+    	$(clase).addClass("active");
+	}
+
 	function displaylist(i){
 		var no = i + 1;
 		$(".display").append("<tr> "+ 
 								"<td class =\"num\"> "+ no +"</td>"+
-								"<td class =\"song\"> "+ Song[i] +"</td>"+
 								"<td class =\"image\"> <img src=\""+ ImageAlbum[i] +"\" class =\"img-responsive\" alt=\"ImgDisk\"/></td>"+
+								"<td class =\"song\"> "+ Song[i] +"</td>"+
 								"<td class =\"artist\"> <a href =\""+ArtistBiography[i]+"\" target=\"blank\">"+ NameArtist[i] +"</a></td>"+
 								"<td class =\"playcount\"> "+ Playcounts[i] +"</td>"+
 								"<td class =\"duration\"> "+ Duration[i] +"</td>"+
@@ -75,10 +81,12 @@ $(document).ready(function() {
     });
 	});
 	
+
+	/****************** Order For Duration ********************/
 	/*Order for Duration Up - Down*/
 	$(".ForDurationUp").click(function() {
 		$('.display').empty();
-		console.log("click");
+		addClass(".ForDurationUp");
 		OrderDuration.sort(deMayorAMenor);
 
 		for (var i = 0; i < 50; i++) {
@@ -98,7 +106,8 @@ $(document).ready(function() {
 	/*Order for Duration Down - Up*/
 	$(".ForDurationDown").click(function() {
 		$('.display').empty();
-		console.log("click");
+		addClass(".ForDurationDown");
+
 		OrderDuration.sort(deMenorAMayor);
 
 		for (var i = 0; i < 50; i++) {
@@ -115,10 +124,11 @@ $(document).ready(function() {
 		}
 	});
 
+	/****************** Order For Playcount ********************/
 	/*Order for PlayCount Up - Down*/
 	$(".ForPlaycountUp").click(function() {
 		$('.display').empty();
-		console.log("click");
+		addClass(".ForPlaycountUp");
 		OrderPlayCount.sort(deMayorAMenor);
 
 		for (var i = 0; i < 50; i++) {
@@ -138,7 +148,8 @@ $(document).ready(function() {
 	/*Order for PlayCount Down - Up*/
 	$(".ForPlaycountDown").click(function() {
 		$('.display').empty();
-		console.log("click");
+		addClass(".ForPlaycountDown");
+
 		OrderPlayCount.sort(deMenorAMayor);
 
 		for (var i = 0; i < 50; i++) {
@@ -155,19 +166,15 @@ $(document).ready(function() {
 		}
 	});
 	
+	/****************** Order For SongName ********************/
 	/*Order for Song A-Z*/
 	$(".ForSongAZ").click(function() {
 		$('.display').empty();
-		console.log("nombre AZ");
+		addClass(".ForSongAZ");
+
 		OrderName.sort(); 
-		console.log(Song);
-		//OrderName.reverse();
-		console.log(OrderName);
 		for (var i = 0; i < 50; i++) {
 			for (var x = 0; x < 50; x++){
-				console.log(Song[x]);
-				console.log(OrderName[i]);
-
 				if (Song[x] === OrderName[i]){
 					console.log("-------IGUALES-------");
 					displaylist(x);
@@ -180,11 +187,10 @@ $(document).ready(function() {
 	/*Order for Song Z-A*/
 	$(".ForSongZA").click(function() {
 		$('.display').empty();
-		console.log("nombre ZA");
+		addClass(".ForSongZA");
+
 		OrderName.sort();
 		OrderName.reverse(); 
-		console.log(Song);
-		console.log(OrderName);
 		for (var i = 0; i < 50; i++) {
 			for (var x = 0; x < 50; x++){
 				console.log(Song[x]);
@@ -199,10 +205,11 @@ $(document).ready(function() {
 		}
 	});
 
+	/****************** Restart Home ********************/
 	/*Dell Filters*/
 	$(".Dell").click(function() {
 		$('.display').empty();
-		console.log("click");
+		addClass(".Dell");
 		for (var i = 0; i < 50; i++) {
 
 			displaylist(i);
