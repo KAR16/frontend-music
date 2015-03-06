@@ -14,18 +14,24 @@ var OrderPlayCount = [];
 
 
 $(document).ready(function() {
+
+	/*Function order down to up*/
 	function deMenorAMayor(elem1, elem2) {
 		return elem1-elem2;
 	}
+
+	/*Function order up to down*/
 	function deMayorAMenor(elem1, elem2) {
 		return elem2-elem1;
 	}
 
+	/*Function select*/
 	function addClass(clase){
 		$(".filters li").removeClass("active");
     	$(clase).addClass("active");
 	}
 
+	/*Function for display the list in the table*/
 	function displaylist(i){
 		var no = i + 1;
 		$(".display").append("<tr> "+ 
@@ -38,6 +44,7 @@ $(document).ready(function() {
 								"<td class =\"play\"> <a href =\""+PlaySong[i]+"\" target=\"blank\"><img src=\"images/play.png\" class=\"img-responsive\" alt=\"playImage\"> </a> </td>");
 	};
 
+	/*Read the Appi and initialize variables*/
 	jQuery(document).ready(function($) { 
       	$.ajax({ 
 	        url : "http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=fc2665a2795896f51aa91ac935720d6b&format=json", 

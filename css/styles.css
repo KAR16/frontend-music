@@ -1,10 +1,10 @@
-
 /*Title of page*/
 .title{
 	font-size: 40px;
 	text-align: center;
 }
 
+/*Banner Title*/
 .banner{
 	margin-top: 100px;
 }
@@ -21,7 +21,7 @@ body{
 	margin-left: 400px;
 }
 
-/*Tabla de la lista*/
+/*Music Table*/
 .display{
 	margin-top: 100px;
 	margin-left: 50px;
@@ -35,24 +35,13 @@ table{
 	background-color: white;
 }
 
-
-/******Div of Filters*****/
-/*.Filters {
-	display: inline-block;
-}*/
-
-
+/*ScrollVertical in the table*/
 .scrollVertical{
-/* Scroll Bar Vertical en la tabla del JSON */
+/* Scroll Bar Vertical in table of the Appi */
 display: block;
   height: calc(60vh - 1px);
   min-height: calc(200px + 1 px);
 
   /*use calc for fixed ie9 & <*/
   overflow-Y: scroll;
-  }
-
-
-.jumbotron{
-	background-color: yellow;
 }
